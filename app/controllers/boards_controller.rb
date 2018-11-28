@@ -2,7 +2,7 @@ class BoardsController < ApplicationController
   before_action :set_target_board, only: %i[show edit update destroy]
   
   def index
-    @boards = Board.paginate(page: params[:page], per_page: 20)
+    @boards = Board.paginate(page: params[:page], per_page: 15)
   end
   
   def new
@@ -11,7 +11,6 @@ class BoardsController < ApplicationController
   
   def create
     board = Board.create(board_params)
-    flash[:notice] = "「#{board.title}」の掲示板を作成しました"
     redirect_to board
   end
   
@@ -30,7 +29,7 @@ class BoardsController < ApplicationController
   def destroy
     @board.delete
     
-    redirect_to boards_path, flash: { notice: "「#{@board.title}」の掲示板が削除されました" }
+    redirect_to boards_path
   end
 
   private

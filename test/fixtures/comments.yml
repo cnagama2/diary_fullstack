@@ -1,23 +1,27 @@
 # == Schema Information
 #
-# Table name: boards
+# Table name: comments
 #
 #  id         :integer          not null, primary key
-#  name       :string
-#  title      :string
-#  body       :text
+#  comment    :text             not null
+#  name       :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  board_id   :integer
+#
+# Indexes
+#
+#  index_comments_on_board_id  (board_id)
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  board: one
   name: MyString
-  title: MyString
-  body: MyText
+  comment: MyText
 
 two:
+  board: two
   name: MyString
-  title: MyString
-  body: MyText
+  comment: MyText

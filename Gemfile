@@ -7,10 +7,9 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.7'
+gem 'rails', '~> 5.0.6'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
-gem 'rails-i18n'
 
 gem 'will_paginate', '~> 3.0'
 # Use Puma as the app server
@@ -37,6 +36,11 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+gem 'bootstrap','~>4.0.0'
+gem 'mini_racer'
+gem 'kaminari'
+gem 'rails-i18n'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -42,28 +42,28 @@ RSpec.describe UsersController, type: :controller do
       end
     end
   
-      context 'パラメータに正しいユーザー名、確認パスワードが含まれていない場合' do
-        before do
-          post(:create, params: {
+    context 'パラメータに正しいユーザー名、確認パスワードが含まれていない場合' do
+       before do
+         post(:create, params: {
             user: {
               name: 'ユーザー1',
               password: 'password',
               password_confirmation: 'invalid_password'
             }
           })
-        end
-  
-        it 'リファラーにリダイレクトされること' do
-          expect(response).to redirect_to(@referer)
-        end
-    
-        it 'ユーザー名のエラーメッセージが含まれていること' do
-          expect(flash[:error_messages]).to include 'ユーザー名は小文字英数字で入力してください'
-    　　end
-    　　
-    　　it 'パスワード確認のエラーメッセージが含まれていること' do
-    　　    expect(flash[:error_messages]).to include 'パスワード（確認)とパスワードの入力が一致しません'
-        end　　
       end
+  
+      it 'リファラーにリダイレクトされること' do 
+        expect(response).to redirect_to(@referer)
+      end
+    
+      it 'ユーザー名のエラーメッセージが含まれていること' do
+        expect(flash[:error_messages]).to include 'ユーザー名は小文字英数字で入力してください'
+    　end
+    　　
+    　it 'パスワード確認のエラーメッセージが含まれていること' do
+    　　  expect(flash[:error_messages]).to include 'パスワード（確認)とパスワードの入力が一致しません'
+      end　　
     end
+  end
 end

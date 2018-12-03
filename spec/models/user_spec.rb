@@ -46,7 +46,5 @@ RSpec.describe User, type: :model do
         expect(user.age).to eq 9
       end
     end
-  
-      
   end
 end

@@ -3,7 +3,7 @@ class BoardsController < ApplicationController
   
   def index
     @boards = params[:tag_id].present? ? Tag.find(params[:tag_id]).boards : Board.all
-    @boards = @boards.paginate(page: params[:page], per_page: 15)
+    @boards = Board.page(params[:page])
   end
   
   def new

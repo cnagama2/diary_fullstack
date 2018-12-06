@@ -1,4 +1,11 @@
 ja:
+  views:
+    pagination:
+      first: 最初
+      last: 最後
+      previous: 前
+      next: 次
+      truncate: ...
   activerecord:
     attributes:
       user:
@@ -12,6 +19,3 @@ ja:
       comment: 
         name: 名前
         comment: コメント
-  will_paginate:
-    previous_label: '前'
-    next_label: '次'

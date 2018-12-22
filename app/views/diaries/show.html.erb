@@ -1,0 +1,12 @@
+<div class="d-flex align-items-center mt-4 mb-4">
+  <div class="ml-auto diaries__linkBox">
+    <%= link_to '一覧', diaries_path, class: 'btn btn-outline-dark' %>
+    <%= link_to '編集', edit_diary_path(@diary), class: 'btn btn-outline-dark' %>
+  </div>
+</div>
+
+<% if flash[:notice] %>
+ <div class="alert alert-primary"><%= flash[:notice] %></div>
+ <% end %>
+
+<%= render @diary %>

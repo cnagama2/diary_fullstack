@@ -22,12 +22,14 @@
       <th scope="col">本文</th>
       <th scope="col">作成日時</th>
       <th scope="col">更新日時</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
     <% @diaries.each do |diary| %>
     <tr>
-      <td><%= diary.id %></td>
+      <th scope="row"><%= diary.id %></th>
       <td><%= diary.title %></td>
       <td><%= diary.body %></td>
       <td><%= diary.created_at.to_s(:datetime_jp) %></td>

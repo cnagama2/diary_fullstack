@@ -1,5 +1,5 @@
 class DiariesController < ApplicationController
-  before_action :set_target_diary, only: %i[edit update destroy]
+  before_action :set_target_diary, only: %i[ show edit update destroy]
   
   def index
     @diaries = params[:tag_id].present? ? Tag.find(params[:tag_id]).diaries : Diary.all
@@ -49,7 +49,7 @@ class DiariesController < ApplicationController
   private
   
     def diary_params
-      params.require(:diary).permit(:title, :body, tag_ids: [])
+      params.require(:diary).permit(:title, :body)
     end
     
     def set_target_diary

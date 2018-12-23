@@ -1,3 +1,19 @@
-h1{
-  margin : 30px 0;
+@import "bootstrap";
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 3em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
 }

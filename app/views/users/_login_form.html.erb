@@ -1,4 +1,5 @@
-<h1>ログイン</h1>
+<div class="center jumbotron">
+<h1>My Diary -login</h1>
 
 <%= form_for(:session,method: :post, url:login_path) do |f|  %>
   <div class="form-group">
@@ -9,5 +10,6 @@
     <%= f.label :password,'パスワード' %>
     <%= f.password_field :password, class:'form-control' %>
   </div>
-  <%= f.submit 'ログイン', class: 'btn btn-primary' %>
+  <%= f.submit 'login', class: 'btn btn-primary' %>
 <% end %>
+</div>

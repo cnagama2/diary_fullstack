@@ -1,5 +1,6 @@
 class DiariesController < ApplicationController
   before_action :set_target_diary, only: %i[ show edit update destroy]
+  require 'date'
   
   def index
     @diaries = params[:tag_id].present? ? Tag.find(params[:tag_id]).diaries : Diary.all
@@ -8,6 +9,7 @@ class DiariesController < ApplicationController
   
   def new
     @diary = Diary.new(flash[:diary])
+    @time = Time.now
   end
   
   def create

@@ -1,7 +1,5 @@
 <div class="d-flex align-items-center">
-  <h1>日記作成</h1>
-  <div class="ml-auto diaries__linkBox">
-    <%= link_to '一覧', diaries_path, class: 'btn btn-outline-dark' %>
-  </div>
+  <h1><%= @time.strftime("%Y年%m月%d日") %></h1>
+  
 </div>
 <%= render partial: 'form', locals: {diary: @diary } %>

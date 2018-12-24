@@ -16,7 +16,7 @@ class DiariesController < ApplicationController
     diary = Diary.new(diary_params)
     if diary.save
       flash[:notice] = "「#{diary.title}」を作成しました"
-      redirect_to diary
+      redirect_to diary_path
     else
       redirect_to :back, flash: {
         diary: diary,
@@ -34,6 +34,7 @@ class DiariesController < ApplicationController
   
   def update
     if @diary.update(diary_params)
+      flash[:notice] = "「#{@diary.title}」を編集しました"
       redirect_to @diary
           else
       redirect_to :back, flash: {

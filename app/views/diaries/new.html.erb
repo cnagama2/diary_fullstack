@@ -1,5 +1,5 @@
 <div class="d-flex align-items-center">
-  <h1><%= @time.strftime("%Y年%m月%d日") %></h1>
+  <h1><%= @time.strftime("%Y年%m月%d日") %> の日記</h1>
   
 </div>
 <%= render partial: 'form', locals: {diary: @diary } %>

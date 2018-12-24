@@ -8,14 +8,15 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <!--<%= header_link_item('My Diary',root_path) %>-->
-      <%= header_link_item('日記一覧',diaries_path) %>
+      <!--<%= header_link_item('日記一覧',diaries_path) %>-->
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup
         ="true" aria-expanded="false">
-          ユーザー
+          Menu
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <% if @current_user %>
+            <%= link_to '日記一覧', diaries_path, class:'dropdown-item' %>
             <%= link_to 'マイページ', mypage_path, class:'dropdown-item' %>
             <%= link_to 'ログアウト',logout_path, method: :delete, class: 'dropdown-item' %>
           <% else %>
@@ -25,9 +26,5 @@
         </div>
       </li>
     </ul>
-    <!--<form class="form-inline my-2 my-lg-0">-->
-    <!--  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
-    <!--  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
-    <!--</form>-->
   </div>
 </nav>

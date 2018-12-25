@@ -3,7 +3,6 @@
 # Table name: users
 #
 #  id              :integer          not null, primary key
-#  birthday        :date
 #  name            :string           not null
 #  password_digest :string           not null
 #  created_at      :datetime         not null
@@ -28,10 +27,4 @@ class User < ApplicationRecord
   validates :password,
     length: { minimum: 8 }
     
-  def age
-    now = Time.zone.now
-    (now.strftime('%Y%m%d').to_i - birthday.strftime('%Y%m%d').to_i) / 10000
-  end
 end
-
-

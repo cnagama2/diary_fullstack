@@ -6,6 +6,4 @@ Rails.application.routes.draw do
   root 'home#index'
   resources :users, only: %i[new create]
   resources :diaries
-  resources :comments, only: %i[create destroy]
-
 end

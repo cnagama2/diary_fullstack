@@ -1,9 +1,8 @@
 # == Schema Information
 #
-# Table name: boards
+# Table name: diaries
 #
 #  id         :integer          not null, primary key
-#  name       :string
 #  title      :string
 #  body       :text
 #  created_at :datetime         not null
@@ -13,11 +12,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  title: MyString
-  body: MyText
+  title: スターウォーズ
+  body: ダースベイダー
 
 two:
-  name: MyString
-  title: MyString
-  body: MyText
+  title: タイタニック
+  body: レオナルド・ディカプリオ
+
+three:
+  title: Greatest Show
+  body: This is me!
